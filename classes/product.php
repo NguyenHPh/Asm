@@ -103,6 +103,20 @@
                 return false;
             }
         }
+
+        public function search($key){
+            
+            if($key == ""){
+                return $this->showToWeb();
+            }else{
+                $result = $this->connect->query("SELECT * FROM product WHERE is_show = 'checked' AND product_name like '%$key%'");
+                if($result){
+                    return $result;
+                }else{
+                    return false;
+                }
+            }
+        }
         
     };
 ?>

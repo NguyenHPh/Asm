@@ -5,8 +5,8 @@
     $category = new category();
     $result1 = $category->showToWeb();
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        if(!empty($_POST['id'])){
-            $result = $product->showByCategory($_POST['id']);
+        if(!empty($_POST['search'])){
+            $result = $product->search($_POST['search']);
         }else{
             $result = $product->showToWeb();
         }
@@ -35,6 +35,14 @@
         <div class="row row-2">
             <h2>Products</h2>
             <form action = "" method="Post">
+                <table>
+                   <tr>
+                       <td><input type="text" name = "search"></td>
+                       <td><button style = "height: 28px;" type="submit" id = "search-product">Tìm Kiếm</button></td>
+                   </tr>
+                </table>
+            </form>
+         <!--   <form action = "" method="Post">
                 <select name = "id">
                     <?php
                         if(empty($_POST['id']) || !isset($_POST['id'])){
@@ -59,8 +67,8 @@
                         }
                     ?>
                 </select>
-                <input type="submit" name = "submit" value="Tìm kiếm" style="width:100px;">
-            </form>
+                <input type="submit" name = "submit" value="Tìm kiếm" style="width:100px;" id = "search-category">
+            </form>-->
         </div>
 
         <div class="row">

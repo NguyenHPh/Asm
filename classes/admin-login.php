@@ -31,6 +31,7 @@
                 }
             }
         }
+        //test github
 
         private function adminCheck($username, $password){
             $result = $this->connect->query("Select * FROM admin WHERE username = '$username' AND password = '$password'");

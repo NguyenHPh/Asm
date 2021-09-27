@@ -26,6 +26,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #result{
+            margin-top: -30px;
+        }
+    </style>
 </head>
 
     <div class="small-container">
@@ -37,9 +42,13 @@
             <form action = "" method="Post">
                 <table>
                    <tr>
-                       <td><input type="text" name = "search"></td>
-                       <td><button style = "height: 28px;" type="submit" id = "search-product">Tìm Kiếm</button></td>
+                       <td><input type="text" name = "search" placeholder="Nhập sản phẩm cần tìm" onkeyup = "liveSearch(this.value);"></td>
+                       <td><button style = "height: 28px; width: 70px;" type="submit" id = "search-product">Tìm Kiếm</button></td>
                    </tr>
+                   <tr>
+                       <td><span id='result' style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; width:300px; position: fixed;"></span></td>
+                       <td></td>
+                    </tr>
                 </table>
             </form>
          <!--   <form action = "" method="Post">
@@ -103,21 +112,32 @@
         <?php
             include "../include/footer.php";
         ?>
-        <!-- ------------------- js for toggle menu-------------- -->
+        <!-- ------------------- js for live search-------------- -->
         <script>
-            var MenuItems = document.getElementById("MenuItems");
-
-            MenuItems.style.maxHeight = "0px";
-
-            function menutoggle() {
-                if (MenuItems.style.maxHeight == "0px") {
-                    MenuItems.style.maxHeight = "200px";
-                }
-                else {
-                    MenuItems.style.maxHeight = "0px";
+        function object(){
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+                return xmlhttp;
+            }
+        }
+            http = object();
+            function liveSearch(data){
+                if(data != ""){
+                    http.onreadystatechange = process;
+                    http.open('GET', '../classes/get.php?data=' + data, true);
+                    http.send();
+                }else{
+                    document.getElementById("result").innerHTML = "";
                 }
             }
-
+            
+            function process(){
+                if(http.readyState==4 && http.status==200){
+                    var result = http.responseText;
+                    document.getElementById("result").innerHTML = result;
+                }
+            }
         </script>
 </body>
 

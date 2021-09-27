@@ -1,0 +1,13 @@
+.form-add{
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    border: 2px solid #1EDFB1;
+    width: 450px;
+    height: 480px;	
+    background-image: linear-gradient(to right, #A0E9EC, #06888C  );
+}
+.form{
+    margin-left: 60px;	
+    margin-top: 30px;
+}

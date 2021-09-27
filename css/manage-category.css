@@ -1,0 +1,40 @@
+
+			
+.col-lg-9{
+    overflow-y: auto;
+    height: 735px;
+}
+.col-lg-3{
+    height: 735px;
+    border: 1px solid #646566;
+}
+
+
+ul{
+    margin-top: 150px;
+    margin-left: 20px;
+    position: relative;
+}
+ul li{
+    padding-bottom: 18px;
+    list-style-type: none;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.list{
+    background-color: #A8DFE4;
+}
+td{
+    width: 190px;
+    padding-top: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+img{
+    width:60px;
+    height: 60px;
+}
+

@@ -6,7 +6,8 @@ if(isset($_GET['data'])){
     $sql = "SELECT * FROM product WHERE product_name LIKE '$data%'";
     $result = $db->query($sql);
 while($row = mysqli_fetch_assoc($result)){
-    echo $row['product_name']."</br>";
+    $name = $row['product_name'];
+    echo "<div class = 'live-search'><a style = 'font-size:12px' href = '?name=$name'>".$name."</a></div></br>";
 }
 }
 ?>

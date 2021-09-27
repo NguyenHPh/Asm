@@ -4,14 +4,18 @@
     $product = new product();
     $category = new category();
     $result1 = $category->showToWeb();
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        if(!empty($_POST['search'])){
-            $result = $product->search($_POST['search']);
+    if(isset($_GET['name']) && !empty($_GET['name'])){
+        $result = $product->search($_GET['name']);
+    }else{
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if(!empty($_POST['search'])){
+                $result = $product->search($_POST['search']);
+            }else{
+                $result = $product->showToWeb();
+            }
         }else{
             $result = $product->showToWeb();
         }
-    }else{
-        $result = $product->showToWeb();
     }
 ?>
 
@@ -30,6 +34,13 @@
         #result{
             margin-top: -30px;
         }
+        .live-search:hover{
+            background-color: yellowgreen;
+        }
+        .live-search{
+            height: 20px;
+            margin-bottom: -10px;
+        }
     </style>
 </head>
 
@@ -46,7 +57,7 @@
                        <td><button style = "height: 28px; width: 70px;" type="submit" id = "search-product">Tìm Kiếm</button></td>
                    </tr>
                    <tr>
-                       <td><span id='result' style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; width:300px; position: fixed;"></span></td>
+                       <td><span id='result' style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; width:185px; position: fixed;"></span></td>
                        <td></td>
                     </tr>
                 </table>

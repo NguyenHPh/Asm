@@ -7,16 +7,16 @@
     if(isset($_GET['name']) && !empty($_GET['name'])){
         $result = $product->search($_GET['name']);
     }else{
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            if(!empty($_POST['search'])){
-                $result = $product->search($_POST['search']);
-            }else{
-                $result = $product->showToWeb();
-            }
+        $result = $product->showToWeb();
+}   
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(!empty($_POST['search'])){
+            $result = $product->search($_POST['search']);
         }else{
-            $result = $product->showToWeb();
+            header("location: category.php");
         }
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@
         }
         .live-search{
             height: 20px;
-            margin-bottom: -10px;
+            margin-bottom: -17px;
         }
     </style>
 </head>

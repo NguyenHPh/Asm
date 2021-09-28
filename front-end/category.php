@@ -39,7 +39,7 @@
         }
         .live-search{
             height: 20px;
-            margin-bottom: -17px;
+            margin-bottom: -15px;
         }
     </style>
 </head>

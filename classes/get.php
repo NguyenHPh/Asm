@@ -7,7 +7,7 @@ if(isset($_GET['data'])){
     $result = $db->query($sql);
 while($row = mysqli_fetch_assoc($result)){
     $name = $row['product_name'];
-    echo "<div class = 'live-search'><a style = 'font-size:13px' href = '?name=$name'>".$name."</a></div></br>";
+    echo "<a style = 'font-size:13px;' href = '?name=$name'><div class = 'live-search' style = 'height: 30px;'>".$name."</div></a></br>";
 }
 }
 ?>

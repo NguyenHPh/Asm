@@ -37,7 +37,7 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `../image/${allMusic[indexNumb - 1].img}`;
+  musicImg.src = `../image/${allMusic[indexNumb - 1].img}`; // `` trong dấu `` sẽ chèn được các biến với dấu $
   mainAudio.src = `../music/${allMusic[indexNumb - 1].src}`;
 }
 

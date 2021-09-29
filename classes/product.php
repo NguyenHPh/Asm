@@ -14,8 +14,7 @@
 
         public function insert($data, $file){
            $product_name = $this->format->validation($data['product_name']);
-           $product_price = $this->format->validation($data['product_price']);
-           $quantity = $this->format->validation($data['quantity']);
+           $artist = $this->format->validation($data['artist']);
            $product_content = $this->format->validation($data['product_content']);
            $category_id = $this->format->validation($data['category_id']);
            $show = $data['is_show'];
@@ -31,7 +30,7 @@
             $music = $file['music']['name'];
            
 
-           $result = $this->connect->query("INSERT INTO product(product_name, category_id ,product_price, music_file, image, product_content, is_show) VALUES ('$product_name', '$category_id', $product_price , '$music', '$image', '$product_content' ,'$is_show')");
+           $result = $this->connect->query("INSERT INTO product(product_name, category_id ,artist, music_file, image, product_content, is_show) VALUES ('$product_name', '$category_id', '$artist' , '$music', '$image', '$product_content' ,'$is_show')");
            if($result == false){
                 return false;
             }else{
@@ -50,9 +49,7 @@
 
         public function edit($data, $files, $id){
             $product_name = $this->format->validation($data['product_name']);
-            $product_price = $this->format->validation($data['product_price']);
-            $quantity = $this->format->validation($data['quantity']);
-            $product_content = $this->format->validation($data['product_content']);
+            $artist = $this->format->validation($data['artist']);
             $category_id = $this->format->validation($data['category_id']);
             $show = $data['is_show'];
             if($show){
@@ -72,7 +69,7 @@
                 $result = $this->connect->query("UPDATE product SET music_file = '$music' WHERE id = '$id'");
             }
  
-            $result = $this->connect->query("UPDATE product SET product_name = '$product_name', is_show = '$is_show', product_price = '$product_price', quantity = '$quantity', category_id = '$category_id', product_content = '$product_content'  WHERE id = '$id'");
+            $result = $this->connect->query("UPDATE product SET product_name = '$product_name', is_show = '$is_show', artist = '$artist', category_id = '$category_id' WHERE id = '$id'");
             return $result;
         }
 

@@ -56,11 +56,11 @@
 			</tr>
 			<tr>
 				<td>Giá: </td>
-				<td><input type = "text" name = "product_price" style = "width: 200px;" value="<?php echo $row["product_price"];?>"></td>
+				<td><input type = "text" name = "artist" style = "width: 200px;" value="<?php echo $row["artist"];?>"></td>
 			</tr>
 			<tr>
 				<td>Số lượng: </td>
-				<td><input type = "text" name = "quantity" style = "width: 200px;" value="<?php echo $row["quantity"];?>"></td>
+				<td><input type = "file" name = "music" style = "width: 200px;" value="<?php echo $row["music_file"];?>"></td>
 			</tr>
 			<tr>
 				<td>Mã danh mục: </td>

@@ -34,8 +34,8 @@
 				<td><input type = "file" name="image" style = "width: 200px;" required/></td>
 			</tr>
 			<tr>
-				<td>Giá: </td>
-				<td><input type = "text" name = "product_price" style = "width: 200px;" required></td>
+				<td>Tác giả: </td>
+				<td><input type = "text" name = "artist" style = "width: 200px;" required></td>
 			</tr>
 			<tr>
 			<td>Chọn file nhạc: </td>

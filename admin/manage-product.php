@@ -60,7 +60,7 @@
 				<td><img src = "<?php echo ("../image/".$row["image"]);?>"></td>
 				<td><?php echo $row["product_name"];?></td>
 				<td><?php echo $row["category_id"];?></td>
-				<td><?php echo $row["quantity"]?></td>
+				<td><?php echo $row["music_file"]?></td>
 				<td><?php echo $row["product_price"]?>đ</td>
 				<td><?php echo $row["update_date"]?></td>
 				<td><input type="checkbox" name = "check" <?php echo $row["is_show"]?>></td>

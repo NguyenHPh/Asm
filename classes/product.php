@@ -26,9 +26,12 @@
            }
            move_uploaded_file($file['image']['tmp_name'], "../image/".$file['image']['name']);
            $image = $file['image']['name'];
+
+           move_uploaded_file($file['image']['tmp_name'], "../music/".$file['music']['name']);
+            $music = $file['music']['name'];
            
 
-           $result = $this->connect->query("INSERT INTO product(product_name, category_id ,product_price, quantity, image, product_content, is_show) VALUES ('$product_name', '$category_id', $product_price , '$quantity', '$image', '$product_content' ,'$is_show')");
+           $result = $this->connect->query("INSERT INTO product(product_name, category_id ,product_price, music_file, image, product_content, is_show) VALUES ('$product_name', '$category_id', $product_price , '$music', '$image', '$product_content' ,'$is_show')");
            if($result == false){
                 return false;
             }else{
@@ -61,6 +64,12 @@
                 move_uploaded_file($files['image']['tmp_name'], "../image/".$files['image']['name']);
                 $image = $files['image']['name'];
                 $result = $this->connect->query("UPDATE product SET image = '$image' WHERE id = '$id'");
+            }
+
+            if(isset($files['music']) && $files['music']['error'] == 0){
+                move_uploaded_file($files['image']['tmp_name'], "../music/".$files['music']['name']);
+                $music = $files['music']['name'];
+                $result = $this->connect->query("UPDATE product SET music_file = '$music' WHERE id = '$id'");
             }
  
             $result = $this->connect->query("UPDATE product SET product_name = '$product_name', is_show = '$is_show', product_price = '$product_price', quantity = '$quantity', category_id = '$category_id', product_content = '$product_content'  WHERE id = '$id'");

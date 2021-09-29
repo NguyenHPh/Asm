@@ -105,7 +105,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p><?php echo $row['product_price'];?>đ<p>
+                    <p><?php echo $row['artist'];?><p>
                 </div>
             <?php
                 }

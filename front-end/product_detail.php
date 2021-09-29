@@ -1,4 +1,10 @@
-<?php  include "../include/music-list.php" ?>
+<?php  
+  require_once "../include/music-list.php";
+  require_once "../classes/product.php";
+  $pd = new product();
+  $result = $pd->showOnly($_GET['id']);
+  while($row = mysqli_fetch_assoc($result)){
+?>
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en">
@@ -6,7 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player | CodingNepal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/music-player.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -17,7 +23,7 @@
       <i class="material-icons">more_horiz</i>
     </div>
     <div class="img-area">
-      <img src="" alt="">
+      <img src="<?php echo "../image/".$row['image']?>" alt="">
     </div>
     <div class="song-details">
       <p class="name"></p>
@@ -25,7 +31,7 @@
     </div>
     <div class="progress-area">
       <div class="progress-bar">
-        <audio id="main-audio" src=""></audio>
+        <audio id="main-audio" src="<?php echo "../music/".$row['music_file']?>"></audio>
       </div>
       <div class="song-timer">
         <span class="current-time">0:00</span>
@@ -59,3 +65,6 @@
 
 </body>
 </html>
+<?php
+  }
+?>

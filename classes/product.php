@@ -27,7 +27,7 @@
            move_uploaded_file($file['image']['tmp_name'], "../image/".$file['image']['name']);
            $image = $file['image']['name'];
 
-           move_uploaded_file($file['image']['tmp_name'], "../music/".$file['music']['name']);
+           move_uploaded_file($file['music']['tmp_name'], "../music/".$file['music']['name']);
             $music = $file['music']['name'];
            
 
@@ -67,7 +67,7 @@
             }
 
             if(isset($files['music']) && $files['music']['error'] == 0){
-                move_uploaded_file($files['image']['tmp_name'], "../music/".$files['music']['name']);
+                move_uploaded_file($files['music']['tmp_name'], "../music/".$files['music']['name']);
                 $music = $files['music']['name'];
                 $result = $this->connect->query("UPDATE product SET music_file = '$music' WHERE id = '$id'");
             }

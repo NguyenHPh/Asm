@@ -1,0 +1,63 @@
+body{
+    font-family: 'Noto Sans Display';
+}
+
+.user-info{
+    background-color: rgba(83,117,172,1);
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info-detail{
+    width: 600px;
+    display: flex;
+}
+
+.user-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 2px solid white;
+    float: left;
+    margin-left: 150px;
+    margin-top: 40px;
+    background: url("../web_image/avatar_default_2020.png");
+    background-size: contain; 
+}
+
+.user-info{
+    color: white;
+}
+.info{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.side-bar{
+    background-color: darkgray;
+    height: 50px;
+}
+
+ul{
+    margin-top: 0px;
+    padding: 7px 0 0 90px;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline;
+    padding: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.fa-home{
+    font-size: 30px;
+    color: cornflowerblue;
+}

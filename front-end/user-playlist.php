@@ -37,6 +37,9 @@
                 <li><a href="">Bạn bè</a></li>
             </ul>
         </div>
+        <div class = "play-list">
+        
+        </div>
     </div>
 
 </body>

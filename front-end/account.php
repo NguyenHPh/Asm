@@ -4,6 +4,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
+        
         if(isset($_POST['login-form'])){
 
         }else if(isset($_POST['register-form'])){
@@ -53,18 +54,18 @@
                             <hr id="Indicator">
                         </div>
 
-                        <form name = "login-form" id="LoginForm" action ="" method="post">
+                        <form  id="LoginForm" action ="" method="post">
                             <input type="text" placeholder="Username" name = "username" required>
                             <input type="password" placeholder="Password" name = "password" required>
-                            <button type="submit" class="btn">Login</button>
+                            <button name = "login-form" type="submit" class="btn">Login</button>
                             <a href="">Forgot password</a>
                         </form>
 
-                        <form name = "register-form" id="RegForm" action="" method="post">
+                        <form  id="RegForm" action="" method="post">
                             <input type="text" placeholder="Username" name = "username" required>
                             <input type="email" placeholder="Email" name = "email" required>
                             <input type="password" placeholder="Password" name = "password" required>
-                            <button type="submit" class="btn">Register</button>
+                            <button type="submit" class="btn" name = "register-form">Register</button>
                         </form>
 
                     </div>

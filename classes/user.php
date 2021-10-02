@@ -9,18 +9,18 @@
 
         public function __construct()
         {
-            $db = new Database();
-            $fm = new Format();
-            $ss = new Session();
+            $this->db = new Database(); // không được thiếu $this
+            $this->fm = new Format();
+            $this->ss = new Session();
         }
 
         public function addNewUser($username, $password, $email){
             $username = $this->fm->validation($username);
             $password = $this->fm->validation($password);
             $email = $this->fm->validation($email);
-            $result = $this->db->query("INSERT INTO user('username, password, email') VALUES ('$username, '$password', '$email')");
+            $result = $this->db->query("INSERT INTO user (username, password, email) VALUES ('$username', '$password', '$email')");
             if($result){
-                return true;
+                return $result;
             }else{
                 return false;
             }

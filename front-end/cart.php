@@ -23,10 +23,10 @@
 </head>
 
 <body>
+    <?php
+        include "../include/header.php";
+    ?>
     <div class="container">
-       <?php
-            include "../include/header.php";
-       ?>
 
     <!-- -----------------cart item details------------------- -->
     <div class="small-container cart-page">

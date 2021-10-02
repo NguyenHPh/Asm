@@ -35,12 +35,11 @@
 
 <body>
     <!-- ------------Account-page------------------- -->
+    <?php
+            include "../include/header.php";
+    ?>
     <div class="account-page">
-        <div class="container">
-        <div class="container">
-       <?php
-          include "../include/header.php";
-       ?>
+        <div class="container" style="padding: 0px;">
             <div class="row">
                 <div class="col-2">
                     <img src="../image/image1.png" width="100%">

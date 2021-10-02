@@ -43,11 +43,10 @@
         }
     </style>
 </head>
-
+    <?php
+        include "../include/header.php";
+    ?>
     <div class="small-container">
-        <?php
-            include "../include/header.php";
-        ?>
         <div class="row row-2">
             <h2>Products</h2>
             <form action = "" method="Post">

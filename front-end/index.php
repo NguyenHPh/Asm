@@ -11,11 +11,11 @@
 </head>
 
 <body>
+     <?php
+         include "../include/header.php";
+     ?>
     <div class="header">
         <div class="container">
-           <?php
-            include "../include/header.php";
-           ?>
             <div class="row">
                 <div class="col-2">
                     <h1>Give Your Workout<br> A New Style!</h1>

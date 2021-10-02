@@ -1,3 +1,24 @@
+<?php
+    include "../classes/user.php";
+    $user = new User();
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if(isset($_POST['login-form'])){
+
+        }else if(isset($_POST['register-form'])){
+            $email = $_POST['email'];
+            $result = $user->addNewUser($username, $password, $email);
+            if($result){
+?>
+                <script>
+                    alert("Đăng kí thành công");
+                </script>
+<?php
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -32,17 +53,17 @@
                             <hr id="Indicator">
                         </div>
 
-                        <form id="LoginForm">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
+                        <form name = "login-form" id="LoginForm" action ="" method="post">
+                            <input type="text" placeholder="Username" name = "username" required>
+                            <input type="password" placeholder="Password" name = "password" required>
                             <button type="submit" class="btn">Login</button>
                             <a href="">Forgot password</a>
                         </form>
 
-                        <form id="RegForm">
-                            <input type="text" placeholder="Username">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Password">
+                        <form name = "register-form" id="RegForm" action="" method="post">
+                            <input type="text" placeholder="Username" name = "username" required>
+                            <input type="email" placeholder="Email" name = "email" required>
+                            <input type="password" placeholder="Password" name = "password" required>
                             <button type="submit" class="btn">Register</button>
                         </form>
 

@@ -33,7 +33,7 @@ class Session{
 
  public static function checkSession(){
     self::init();
-    if (self::get("login_admin")== false) {
+    if (self::get("login_admin") == false) {
      self::destroy();
      header("Location: index.php");
     }
@@ -43,6 +43,15 @@ class Session{
     self::init();
     if (self::get("login_admin") == true) {
      header("Location: manage-product.php");
+    }
+ }
+
+ public static function checkLoginForUser(){
+    self::init();
+    if(self::get("login-user") == true){
+       return true;
+    }else{
+       return false;
     }
  }
 

@@ -44,14 +44,14 @@ function loadMusic(indexNumb){
 //play music function
 function playMusic(){
   wrapper.classList.add("paused");
-  playPauseBtn.querySelector("i").innerText = "pause";
+  playPauseBtn.querySelector("i").innerText = "pause"; // đưa pause vào trong thẻ i của font awsome sẽ tạo thành nút pause
   mainAudio.play();
 }
 
 //pause music function
 function pauseMusic(){
   wrapper.classList.remove("paused");
-  playPauseBtn.querySelector("i").innerText = "play_arrow";
+  playPauseBtn.querySelector("i").innerText = "play_arrow"; // đưa play_arrow vào trong thẻ i của font awesome sẽ thảo thành nút play
   mainAudio.pause();
 }
 

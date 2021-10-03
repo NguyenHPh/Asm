@@ -26,6 +26,10 @@ body{
     background-size: contain; 
 }
 
+#info{
+    font-weight: bold;
+}
+
 .user-info{
     color: white;
 }
@@ -35,7 +39,7 @@ body{
 }
 
 .side-bar{
-    background-color: darkgray;
+    background-color:whitesmoke;
     height: 50px;
 }
 
@@ -60,4 +64,89 @@ ul li a{
 .fa-home{
     font-size: 30px;
     color: cornflowerblue;
+}
+
+.list-music{
+    display: flex;
+    flex-direction: row;
+}
+
+.image-playlist{
+    width: 150px;
+    height: 150px;
+    background-color:darksalmon;
+    margin-left: 100px;
+}
+
+#playlist-name{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#username{
+    margin: 5px 0 0 10px;
+    font-weight: bold;
+}
+
+#playlist-information{
+    margin: 5px 0 0 10px;
+    font-weight: bold;
+}
+
+.footer{
+    background-image: linear-gradient(to right, #348feb, #34a8eb);
+    height: 60px;
+}
+
+.play-list{
+    height: 355px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+#address{
+    color: white;
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+
+#mail{
+    color: white;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.fa-map-marker-alt{
+    font-size: 18px;
+}
+
+.fa-envelope{
+    font-size: 18px;
+}
+
+#phone-number{
+    color: white;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.fa-phone-alt{
+    font-size: 18px;
+}
+
+#team{
+    color: white;
+    margin-left: 120px;
+    font-weight: bold;
+}
+
+.fa-user-friend{
+    font-size: 18px;
 }

@@ -37,10 +37,22 @@
                 <li><a href="">Bạn bè</a></li>
             </ul>
         </div>
-        <div class = "play-list">
-        
+    </div>
+    <div class = "play-list">
+        <h1 style="color: cornflowerblue; margin-left: 100px;">Play List|Album</h1>
+        <div class = "list-music">
+            <a href=""><div class = "image-playlist">
+              
+            </div></a>
+            <div class = "playlist-content">
+                <p id = "playlist-name"><a href="">PlayList Name</a></p>
+                <p id = "username">User name: </p>
+                <p id = "playlist-information">Playlist Information: </p>
+            </div>
         </div>
     </div>
-
+    <?php
+        include "../include/foooter-user-playlist.php";
+    ?>
 </body>
 </html>

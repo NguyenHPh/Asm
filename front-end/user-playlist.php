@@ -1,5 +1,11 @@
 <?php
-    
+    include "../classes/user.php";
+    $user = new User();
+    if(isset($_GET['action'])){
+        if($_GET['action'] == "logout"){
+            $user->logout();
+        }
+    }
 ?>
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->

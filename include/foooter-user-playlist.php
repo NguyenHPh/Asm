@@ -11,4 +11,4 @@
         <div class = "team">
             <p id = "team"><i class="fas fa-user-friends"></i> Team 7 Corp, All rights reserved</p>
         </div>
-    </div>
+</div>

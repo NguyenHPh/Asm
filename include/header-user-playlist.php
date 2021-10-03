@@ -1,3 +1,4 @@
+
 <div class = "container"> 
         <div class = "user-info">
             <div class = "user-info-detail">
@@ -12,10 +13,11 @@
         </div>
         <div class = "side-bar">
             <ul>
-                <li><a href=""><i class="fas fa-home"></i></a></li>
+                <li><a href="../front-end/index.php"><i class="fas fa-home"></i></a></li>
                 <li><a href="">Play List</a></li>
                 <li><a href="">Thông tin</a></li>
                 <li><a href="">Bạn bè</a></li>
+                <li><a href = "?action=logout">Đăng Xuất</a></li>
             </ul>
         </div>
     </div>

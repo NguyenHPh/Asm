@@ -30,15 +30,16 @@
             $result = $this->db->query("SELECT * FROM user WHERE username = '$username' AND password = '$password'");
             if($result){
                 $value = $result->fetch_array();
-                $this->ss->set('login-admin',$value['user_id']);
+                $this->ss->set("login-user",$value['user_id']);
+                header("Location: ../front-end/account.php");
             }else{
                 return false;
             }
         }
 
         public function logout(){
-            unset($_SESSION["login-admin"]);
-            header("../front-end/account.php");
+            unset($_SESSION["login-user"]);
+            header("Location: ../front-end/account.php");
         }
     };
 ?>

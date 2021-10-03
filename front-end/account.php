@@ -1,12 +1,18 @@
 <?php
     include "../classes/user.php";
+    require_once "../Lib/session.php";
     $user = new User();
+    $check = Session::checkLoginForUser();
+    if($check == true){
+        header("Location: user-playlist.php");
+    }
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $username = $_POST['username'];
         $password = $_POST['password'];
+        var_dump($username);
         
-        if(isset($_POST['login-form'])){
-
+        if(isset($_POST['login-form'])){        
+            $user->login($username, $password);
         }else if(isset($_POST['register-form'])){
             $email = $_POST['email'];
             $result = $user->addNewUser($username, $password, $email);

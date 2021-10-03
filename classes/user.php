@@ -14,6 +14,10 @@
             $this->ss = new Session();
         }
 
+        public function showInfoUser($id){
+           return $this->db->query("SELECT * FROM user WHERE user_id = '$id'");
+        }
+
         public function addNewUser($username, $password, $email){
             $username = $this->fm->validation($username);
             $password = $this->fm->validation($password);
@@ -40,6 +44,17 @@
         public function logout(){
             unset($_SESSION["login-user"]);
             header("Location: ../front-end/account.php");
+        }
+
+        public function editUserInfo($files, $name, $sex, $phone, $address){
+            move_uploaded_file($files['tmp_name'], "../image/".$files['name']);
+            $image = $files['name'];
+            $result = $this->db->query("UPDATE user SET image = '$image', name = '$name', phone = '$phone', address = '$address', sex = '$sex'");
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
         }
     };
 ?>

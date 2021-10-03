@@ -1,6 +1,11 @@
 <?php
-    include "../classes/user.php";
+    require_once "../classes/user.php";
+    require_once "../Lib/session.php";
     $user = new User();
+    $check = Session::checkLoginForUser();
+    if($check == false){
+       header("Location: account.php");
+    }
     if(isset($_GET['action'])){
         if($_GET['action'] == "logout"){
             $user->logout();

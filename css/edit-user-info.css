@@ -14,6 +14,7 @@
 }
 table{
     padding: 30px;
+   
 }
 
 .form-edit{
@@ -36,4 +37,13 @@ td{
 
 #user-address{
     width: 300px;
+}
+
+#submit-edit{
+    width: 80px;
+    height: 30px;
+    margin-left: 180px;
+    background-color:deepskyblue;
+    border: none;
+    cursor: pointer;
 }

@@ -12,8 +12,8 @@
 
 <body>
      <?php
-         include "../include/header.php";
-     ?>
+     include "../include/header.php";
+           ?>
     <div class="header">
         <div class="container">
             <div class="row">

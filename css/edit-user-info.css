@@ -1,0 +1,39 @@
+#title{
+    text-align: center;
+}
+
+.form-edit{
+    width: 500px;
+    height: 500px;
+    border: 2px solid darkgray;
+    margin-left: 500px;
+}
+
+.footer{
+    margin-top: 30px;
+}
+table{
+    padding: 30px;
+}
+
+.form-edit{
+    color: black;
+    font-weight: bold;
+}
+
+td{
+    padding: 0 20px 10px 0;
+}
+
+#name{
+    width: 230px;
+}
+
+#sex-picker{
+    height: 25px;
+    width: 70px;
+}
+
+#user-address{
+    width: 300px;
+}

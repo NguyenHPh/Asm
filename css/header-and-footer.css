@@ -22,7 +22,6 @@ body{
     float: left;
     margin-left: 150px;
     margin-top: 40px;
-    background-size: contain; 
 }
 
 #info{
@@ -110,3 +109,4 @@ ul li a{
 .fa-user-friend{
     font-size: 18px;
 }
+

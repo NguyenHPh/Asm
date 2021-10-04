@@ -1,4 +1,4 @@
-<?php
+`<?php
    
     $userInf = $user->showInfoUser($_SESSION['login-user']);
     while($rowInf = mysqli_fetch_assoc($userInf)){

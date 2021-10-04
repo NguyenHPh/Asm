@@ -47,9 +47,12 @@
         }
 
         public function editUserInfo($files, $name, $sex, $phone, $address){
-            move_uploaded_file($files['tmp_name'], "../image/".$files['name']);
-            $image = $files['name'];
-            $result = $this->db->query("UPDATE user SET image = '$image', name = '$name', phone = '$phone', address = '$address', sex = '$sex'");
+            if(!empty($files['tmp_name'])){
+                move_uploaded_file($files['tmp_name'], "../image/".$files['name']);
+                $image = $files['name'];
+                $update = $this->db->query("UPDATE user SET image = '$image'");
+            }
+            $result = $this->db->query("UPDATE user SET name = '$name', phone = '$phone', address = '$address', sex = '$sex'");
             if($result){
                 return true;
             }else{

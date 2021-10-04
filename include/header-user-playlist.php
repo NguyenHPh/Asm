@@ -14,7 +14,7 @@
 <div class = "container"> 
         <div class = "user-info">
             <div class = "user-info-detail">
-                <div class = "user-image" style="background: url('<?php echo '../image/'.$image?>');">
+                <div class = "user-image" style="background: url('<?php echo '../image/'.$image?>');background-size: cover; background-repeat: no-repeat">
                 </div>
                 <div class = "info">
                     <h1 id = "user-name"><?php echo $rowInf['name']?></h2>

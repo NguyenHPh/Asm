@@ -29,9 +29,6 @@
             }
         }
     }
-        $result = $user->showInfoUser($_SESSION['login-user']);
-        while($row = mysqli_fetch_assoc($result)){
-            $user_sex = $row['sex'];
 ?>
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
@@ -53,6 +50,9 @@
 <body>
     <?php
         include "../include/header-user-playlist.php";
+        $result = $user->showInfoUser($_SESSION['login-user']);
+        while($row = mysqli_fetch_assoc($result)){
+            $user_sex = $row['sex'];
     ?>
     <div class = "container">
         <div class = "row-title">
@@ -63,7 +63,10 @@
                 <form action = "" method="post" enctype="multipart/form-data"> <?php // Muốn post được file phải có enctype = "multipart/form-data" ?>
                     <table>
                         <tr><td>Ảnh đại diện: </td>
-                        <td><input type = "file" name="img"/></td></tr>
+                        <td>
+                            <input type = "file" name="img"/>                        
+                        </td></tr>
+                        
                         <tr><td>Tên đăng nhập: </td>
                         <td><input type = "text" name = "user-account-name" value="<?php echo $row['username']?>" disabled/></td></tr>
                         <tr><td>Tên hiển thị: </td>
@@ -111,11 +114,11 @@
         </div>
     </div>
     <?php
+        }
+    ?>
+    </div>
+    <?php
         include "../include/foooter-user-playlist.php";
     ?>
 </body>
 </html>
-
-<?php
-        }
-?>

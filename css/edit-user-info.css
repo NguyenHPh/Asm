@@ -47,3 +47,8 @@ td{
     border: none;
     cursor: pointer;
 }
+
+.edit-avatar{
+    width: 30px;
+    height: 30px;
+}

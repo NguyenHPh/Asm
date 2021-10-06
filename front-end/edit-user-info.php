@@ -64,7 +64,7 @@
                     <table>
                         <tr><td>Ảnh đại diện: </td>
                         <td>
-                            <input type = "file" name="img"/>                        
+                            <input type = "file" name="img">                        
                         </td></tr>
                         
                         <tr><td>Tên đăng nhập: </td>
